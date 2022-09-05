@@ -153,7 +153,7 @@
 									<li>
 										Đầu vào
 										<ul>
-											<li>Cho vòng lặp chạy từ 0 dến 99</li>
+											<li>Cho vòng lặp chạy từ 0 dến nhỏ hơn 100</li>
 										</ul>
 									</li>
 									<li>
@@ -217,17 +217,32 @@
 									<li>
 										Đầu vào
 										<ul>
-											<li></li>
+											<li>Cho vòng lặp chạy từ 0 dến nhỏ hơn 1000</li>
 										</ul>
 									</li>
 									<li>
 										Xử lý
-										<ul></ul>
+										<ul>
+											<li>
+												Viết hàm kiểm tra số chia hết cho 3:
+												<span class="text-danger">(numb % 3 == 0).</span>
+												Nếu chia hết cho 3 trả ra
+												<span class="text-danger">true</span>
+												ngược lại
+												<span class="text-danger">false</span>
+											</li>
+											<li>Tạo mảng rỗng chứa số chia hết cho 3</li>
+											<li>
+												Chạy vòng lặp. Nếu số đó chia hết cho 3 thì
+												<span class="text-danger">push</span> vào mảng
+											</li>
+											<li>Lấy số phần tử có trong mảng</li>
+										</ul>
 									</li>
 									<li>
 										Đầu ra
 										<ul>
-											<li></li>
+											<li>Hiển thị số lượng số chia hết cho 3 có trong mảng</li>
 										</ul>
 									</li>
 								</ol>
@@ -262,17 +277,27 @@
 									<li>
 										Đầu vào
 										<ul>
-											<li></li>
+											<li>
+												Khởi chạy vòng lặp quay và chỉ dùng khi
+												<span class="text-danger">sum > 10000</span>
+											</li>
 										</ul>
 									</li>
 									<li>
 										Xử lý
-										<ul></ul>
+										<ul>
+											<li>
+												Khởi tọa biến
+												<span class="text-danger">sum</span>
+												chứa tổng cộng dồn của biến bước nhảy
+											</li>
+											<li>Sắp mỗi lần lặp tăng giá trị biến bước nhảy</li>
+										</ul>
 									</li>
 									<li>
 										Đầu ra
 										<ul>
-											<li></li>
+											<li>Hiển thị số nguyên dương nhỏ nhất</li>
 										</ul>
 									</li>
 								</ol>
@@ -311,7 +336,18 @@
 									<li>
 										Xử lý
 										<ul>
-											<li></li>
+											<li>
+												Khởi tạo biến <span class="text-danger">sum</span>
+												để tính tổng
+											</li>
+											<li>
+												Khởi tạo vòng lặp duyệt từ 1 đến
+												<span><= N giá trị người dùng nhập vào</span>
+											</li>
+											<li>
+												Sau mỗi lần lặp thì
+												<span class="text-danger">sum = x ** i</span>
+											</li>
 										</ul>
 									</li>
 									<li>
@@ -344,7 +380,7 @@
 												<input
 													autocomplete="off"
 													type="number"
-													id="numbN"
+													id="txtN"
 													placeholder="Nhập số n"
 												/>
 											</div>
@@ -420,7 +456,7 @@
 								<span class="showResFactorial mess"></span>
 							</div>
 						</div>
-						<!-- Bài 6: Craete div -->
+						<!-- Bài 6: Create div -->
 						<div
 							class="tab-pane fade"
 							id="v-pills-bai6"

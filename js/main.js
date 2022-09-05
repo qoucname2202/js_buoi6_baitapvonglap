@@ -51,8 +51,72 @@ document.getElementById('btnFindEvenOdd').addEventListener('click', e => {
   `;
 });
 // Exercise 2: Count number devide by 3
+function devide3(numb) {
+	if (numb < 0) return false;
+	return numb % 3 === 0 ? true : false;
+}
+function calcCountDevide3() {
+	const numbList = [];
+	for (let i = 0; i < 1000; i++) {
+		if (devide3(i)) {
+			numbList.push(i);
+		}
+	}
+	return numbList.length;
+}
+document.getElementById('btnCountDevide').addEventListener('click', e => {
+	e.preventDefault();
+	const result = document.querySelector('.showCountDevide');
+	const value = calcCountDevide3();
+	result.innerHTML = `Số chia hết cho 3 nhỏ hơn 1000: ${value} số`;
+});
 // Exercise 3: Find integer number min
+function sumAllNumb() {
+	let i = 0;
+	let sum = 0;
+	while (sum < 10000) {
+		i++;
+		sum += i;
+	}
+	return i;
+}
+document.getElementById('btnFindMin').addEventListener('click', e => {
+	e.preventDefault();
+	const result = document.querySelector('.showNumbMin');
+	const value = sumAllNumb();
+	result.innerHTML = `Số nguyên dương nhỏ nhất là: ${value}`;
+});
 // Exercise 4: Calculate sum
+function calcSum(x, n) {
+	let sum = 0;
+	for (let i = 1; i <= n; i++) {
+		sum += x ** i;
+	}
+	return sum;
+}
+
+document.getElementById('btnSum').addEventListener('click', e => {
+	e.preventDefault();
+	const result = document.querySelector('.showSumNumber');
+	const txtX = +document.getElementById('txtX').value;
+	const txtN = +document.getElementById('txtN').value;
+	const value = calcSum(txtX, txtN);
+	result.innerHTML = `Tổng là: ${value}`;
+});
 // Exercise 5: Calculate Factorial
+function calcFactorial(numb) {
+	let res = 1;
+	for (let i = 1; i <= numb; i++) {
+		res *= i;
+	}
+	return res;
+}
+document.getElementById('btnCaclFactorial').addEventListener('click', e => {
+	e.preventDefault();
+	const txtNumb = +document.getElementById('txtNumb').value;
+	const result = document.querySelector('.showResFactorial');
+	const value = calcFactorial(txtNumb);
+	result.innerHTML = `Giai thừa: ${value}`;
+});
 // Exercise 6: Craete div
 // Exercise 7: Print Prime Number

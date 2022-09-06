@@ -119,4 +119,21 @@ document.getElementById('btnCaclFactorial').addEventListener('click', e => {
 	result.innerHTML = `Giai thừa: ${value}`;
 });
 // Exercise 6: Craete div
+function createDiv(amountDiv) {
+	for (i = 1; i <= amountDiv; i++) {
+		var nodes = document.createElement('div');
+		if (isEvenOrOdd(i)) {
+			nodes.innerText = `Div chẵn`;
+			nodes.classList.add('style-even');
+		} else {
+			nodes.innerText = `Div lẻ`;
+			nodes.classList.add('style-odd');
+		}
+		document.getElementById('showDiv').appendChild(nodes);
+	}
+}
+document.getElementById('btnCreateDiv').addEventListener('click', e => {
+	e.preventDefault();
+	createDiv(10);
+});
 // Exercise 7: Print Prime Number

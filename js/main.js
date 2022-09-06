@@ -117,6 +117,11 @@ document.getElementById('btnCaclFactorial').addEventListener('click', e => {
 	const result = document.querySelector('.showResFactorial');
 	const value = calcFactorial(txtNumb);
 	result.innerHTML = `Giai thừa: ${value}`;
+	const formFactorial = document.getElementById('formCalcFactorial');
+	setTimeout(() => {
+		formFactorial.reset();
+		result.innerHTML = '';
+	}, 7000);
 });
 // Exercise 6: Craete div
 function createDiv(amountDiv) {
@@ -137,3 +142,36 @@ document.getElementById('btnCreateDiv').addEventListener('click', e => {
 	createDiv(10);
 });
 // Exercise 7: Print Prime Number
+
+// check numb is Prime
+function isPrime(numb) {
+	if (numb === 1) return false;
+	for (let i = 2; i <= Math.sqrt(numb); i++) {
+		if (numb % i === 0) {
+			return false;
+		}
+	}
+	return true;
+}
+// print prime number
+function printNumbPrime(val) {
+	const primeList = [];
+	for (let i = 1; i <= val; i++) {
+		if (isPrime(i)) {
+			primeList.push(i);
+		}
+	}
+	return primeList.join(' ');
+}
+document.getElementById('btnPrintNumb').addEventListener('click', e => {
+	e.preventDefault();
+	const numb = +document.getElementById('txtPrime').value;
+	const result = document.querySelector('.showPrimeNumb');
+	const formPrime = document.getElementById('formPrintPrimeNumb');
+	const val = printNumbPrime(numb);
+	result.innerHTML = val;
+	setTimeout(() => {
+		formPrime.reset();
+		result.innerHTML = '';
+	}, 7000);
+});
